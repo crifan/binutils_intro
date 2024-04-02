@@ -1,0 +1,176 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE chapter
+[
+
+<!ENTITY % crl_ent PUBLIC "crl.ent" 'http://www.crifan.com/files/res/docbook/entity/crl.ent'>
+%crl_ent;
+
+]>
+
+<chapter    xml:id="gnu_binutils_intro"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:ns5="http://www.w3.org/1998/Math/MathML"
+    xmlns:ns4="http://www.w3.org/1999/xhtml"
+    xmlns:ns3="http://www.w3.org/2000/svg"
+    xmlns:ns="http://docbook.org/ns/docbook">
+<title>GNU Binutils介绍</title>
+<para></para>
+<para>相关旧帖：<link xl:href="http://www.crifan.com/gnu_binutils_tools/">GNU binutils工具使用</link></para>
+<para>相关旧帖：<link xl:href="http://www.crifan.com/summary_about_toolchain_cross_compiler/">【整理】关于Toolchain,cross toolchain,cross compiler</link></para>
+<para></para>
+<sect1 xml:id="what_is_gnu_binutils"><title>什么是GNU Binutils</title>
+    <para>GNU Binutils，即GNU Binary Utilities的简写，一般简称为Binutils。</para>
+    <para>GNU Binutils，中文可以翻译为GNU的二进制工具集。</para>
+    <para>参考官网<link xl:href="http://www.gnu.org/software/binutils/">GNU Binutils</link>的解释，可以解释为：</para>
+    <para>GNU Binutils，是一组二进制工具的集合。</para>
+    <para>其中：</para>
+    <itemizedlist>
+        <listitem>一组
+            <para>一组的意思是，不止一个，很多个。</para>
+        </listitem>
+        <listitem>二进制
+            <para>二进制的意思是，这些工具，都是专门针对于二进制的，去操作二进制的</para>
+            <para>与二进制相对应的，至少有，文本，源代码</para>
+            <para>换句话说，这些工具，不是用于去操作，编译文本的，不是用来编译源代码的，而是专门用于操作二进制的。</para>
+            <para>而二进制的东西，此处主要指的是，源代码编译出来的目标(*.o)文件，(Linux下面的elf等)可执行文件等等。</para>
+        </listitem>
+        <listitem>工具
+            <para>工具的意思是，这些东西，各有对对应的用途，可以用来干活，实现你所需要的目的，满足你的需求</para>
+            <para>至于实现什么目的，满足什么需求，则是不同的工具，有其特定的用途，才有了后面要介绍的，针对每个工具，所去详细解释其用途和用法。</para>
+        </listitem>
+    </itemizedlist>
+</sect1>
+
+<sect1 xml:id="binutils_includes"><title>GNU Binutils都包含哪些工具</title>
+    <para>如上所述，Binutils，是一组工具的统称，其包含了很多工具。</para>
+    <para>Binutils主要包括了ld和as。</para>
+    <para>另外也包括了，相对次要的，但实际上也很常用的，其他工具，比如ar，nm，objcopy等等。</para>
+    <para>下面先简要的介绍一下，这些工具是什么，以及主要功能：</para>
+    <sect2 xml:id="binutils_core_tools"><title>Binutils中包含的主要工具</title>
+        <itemizedlist>
+            <listitem>ld
+                <para>链接器。</para>
+                <para>将多个目标文件，链接成一个可执行文件（或目标库文件）。</para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>as
+                <para>汇编器。</para>
+                <para>将汇编源代码，编译为（目标）机器代码</para>
+                <para></para>
+                <para></para>
+            </listitem>
+        </itemizedlist>
+    </sect2>
+
+    <sect2 xml:id="binutils_other_misc_tools"><title>Binutils中包含的其他次要工具</title>
+        <itemizedlist>
+            <listitem>addr2line
+                <para>将地址转换为（文件名和）行号的工具</para>
+                <para>一般主要用于反汇编（带确认此点）</para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>ar
+                <para>用来操作(.a)档案文件，比如创建，修改，提取内容等</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>c++filt
+                <para>Filter to demangle encoded C++ symbols</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>dlltool
+                <para>Creates files for building and using DLLs</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>gold
+                <para>一个新的，速度更快的，只针对于ELF的链接器</para>
+                <para>当前出于测试中，还不是很成熟稳定</para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>gprof
+                <para>Displays profiling information</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>nlmconv
+                <para>Converts object code into an NLM</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>nm
+                <para>列出目标文件中的符号</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>objcopy
+                <para>拷贝并翻译（转换）文件</para>
+                <para>可用于不同格式的二进制文件的转换</para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>objdump
+                <para>显示目标文件中的信息</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>ranlib
+                <para>Generates an index to the contents of an archive</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>readelf
+                <para>显示ELF格式的（目标）文件的信息</para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>size
+                <para>显示目标文件或(.a)档案文件中的节（section）的大小</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>strings
+                <para>显示文件中的（可打印）的字符串信息</para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>strip
+                <para>去除符号</para>
+                <para>一般用来，把可执行文件中的对于的信息，比如用于debug的信息，去除掉</para>
+                <para>以实现，在不影响程序功能的前提下，减少可执行文件的大小，减少程序的空间占用</para>
+                <para></para>
+            </listitem>
+            <listitem>windmc
+                <para>A Windows compatible message compiler</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+            <listitem>windres
+                <para>A compiler for Windows resource files</para>
+                <para></para>
+                <para></para>
+                <para></para>
+            </listitem>
+        </itemizedlist>
+    </sect2>
+    <para>而接下来的章节，就是详细的介绍每一个工具的详细功能和具体用法了。</para>
+</sect1>
+
+</chapter>

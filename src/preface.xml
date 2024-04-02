@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE preface>
+
+<preface    xml:id="preface"
+            xmlns="http://docbook.org/ns/docbook"
+            xmlns:xl="http://www.w3.org/1999/xlink"
+            xmlns:xi="http://www.w3.org/2001/XInclude"
+            xmlns:ns5="http://www.w3.org/1998/Math/MathML"
+            xmlns:ns4="http://www.w3.org/1999/xhtml"
+            xmlns:ns3="http://www.w3.org/2000/svg"
+            xmlns:ns="http://docbook.org/ns/docbook">
+<title>前言</title>
+
+<sect1 xml:id="purpose"><title>本文目的</title>
+    <para>话说，很久之前，从接触Linux开始，陆陆续续的，知道一些新名词，新工具，比如objcopy，nm等等。</para>
+    <para>包括后来折腾嵌入式开发，多多少少尝试这些工具的实际的使用，但是一直不是很清楚这些东西的真正来历。</para>
+    <para>知道后来，才知道，原来这一系列的工具，就是所谓的Binutils，然后才有了此文：</para>
+    <para>整理出来，Binutils是啥，包含哪些工具，都是如何使用的。</para>
+    <para>即：本文目的在于，将GNU Binutils中的各种工具，的功能解释一下，并且用实际例子，说明如何使用，以及主要是用来干啥的。</para>
+    <para>以实现，看了此文后，了解了GNU Binutils中各种工具的实际使用，并且对于编译链接等方面的知识，更加深入的了解。</para>
+</sect1>
+
+</preface>

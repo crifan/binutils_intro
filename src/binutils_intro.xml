@@ -1,0 +1,75 @@
+<?xml version='1.0' encoding="utf-8"?>
+
+<!DOCTYPE book
+[
+
+<!ENTITY cur_book_name      "binutils_intro" >
+<!ENTITY publish_date       "2013-08-29" >
+<!ENTITY release_version    "1.0" >
+
+<!ENTITY copyrith_year "2013" >
+<!ENTITY entity_common_multi_format     SYSTEM  "../../entity_common_multi_format.xml">
+<!ENTITY entity_common_publish_info     SYSTEM  "../../entity_common_publish_info.xml">
+]>
+
+<book version="5.0"
+    xmlns="http://docbook.org/ns/docbook"
+    xmlns:xi="http://www.w3.org/2001/XInclude"
+    xmlns:xl="http://www.w3.org/1999/xlink"
+    
+    xml:lang="zh_CN">
+<info>
+    <title>GNU Binutils详解</title>
+    <subtitle></subtitle>
+    <keywordset>
+        <keyword>GNU Binutils</keyword>
+        <keyword>工具链</keyword>
+        <keyword>详解</keyword>
+    </keywordset>
+
+    <abstract>
+        <para>本文主要介绍了什么是GNU Binutils，以及Binutils都包含了哪些工具，每个工具的功能的解释，举例详解每个工具实际使用方法。</para>
+        &entity_common_multi_format;
+    </abstract>
+
+    <revhistory>
+        <revision>
+            <revnumber>&release_version;</revnumber>
+            <date>&publish_date;</date>
+            <revremark>
+                <orderedlist>
+                    <listitem>添加GNU Binutils的简介</listitem>
+                    <listitem>把整体框架添加好了，待后续添加每个工具的详细功能和用法</listitem>
+                </orderedlist>
+            </revremark>
+            <authorinitials>crl</authorinitials>
+        </revision>
+    </revhistory>
+
+    &entity_common_publish_info;
+</info>
+
+<xi:include href="preface.xml" />
+<xi:include href="ch01_gnu_binutils_intro.xml" />
+<xi:include href="ch02_ld.xml" />
+<xi:include href="ch03_as.xml" />
+<xi:include href="ch04_addr2line.xml" />
+<xi:include href="ch05_ar.xml" />
+<xi:include href="ch06_cpp_filt.xml" />
+<xi:include href="ch07_dlltool.xml" />
+<xi:include href="ch08_gold.xml" />
+<xi:include href="ch09_gprof.xml" />
+<xi:include href="ch010_nlmconv.xml" />
+<xi:include href="ch011_nm.xml" />
+<xi:include href="ch012_objcopy.xml" />
+<xi:include href="ch013_objdump.xml" />
+<xi:include href="ch014_ranlib.xml" />
+<xi:include href="ch015_readelf.xml" />
+<xi:include href="ch016_size.xml" />
+<xi:include href="ch017_strings.xml" />
+<xi:include href="ch018_strip.xml" />
+<xi:include href="ch019_windmc.xml" />
+<xi:include href="ch020_windres.xml" />
+<xi:include href="reference.xml" />
+
+</book>
